@@ -52,13 +52,14 @@ Understanding file systems is important because:
 
 File systems use a hierarchical structure:
 
+```
 Root
 ├── Folder A
-│ ├── File 1
-│ └── File 2
+│   ├── File 1
+│   └── File 2
 └── Folder B
-└── File 3
-
+    └── File 3
+```
 
 This structure helps organize data efficiently.
 
