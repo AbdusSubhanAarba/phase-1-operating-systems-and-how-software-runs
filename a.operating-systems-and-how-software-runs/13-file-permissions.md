@@ -16,7 +16,7 @@ Understanding file permissions is important because:
 - It ensures system security and stability
 - It controls how users and processes interact with files
 - It is essential in multi-user systems
-- It is widely used in servers and system administration
+- It helps prevent accidental or harmful changes to files
 
 ---
 
@@ -25,101 +25,86 @@ Understanding file permissions is important because:
 - **User (Owner)**: The user who owns the file
 - **Group**: A set of users with shared access permissions
 - **Others**: All other users on the system
-- **Permissions**: Rules that define allowed actions
+- **Permissions**: Rules that define allowed actions on files and directories
 
 ---
 
 ## Types of Permissions
 
-Each file or directory has three basic permissions:
+Operating systems typically define three basic types of permissions:
 
-- **Read (r)** → View file contents
-- **Write (w)** → Modify or delete the file
-- **Execute (x)** → Run the file as a program
+- **Read**  
+  Allows viewing the contents of a file or listing items in a directory
+
+- **Write**  
+  Allows modifying, creating, or deleting data
+
+- **Execute**  
+  Allows running a file as a program or accessing a directory
 
 ---
 
-## Permission Structure
+## Permission Categories
 
-Permissions are defined for three categories:
+Permissions are applied to three categories of users:
 
 | Category | Description             |
 |----------|-------------------------|
-| User     | File owner              |
+| User     | The owner of the file   |
 | Group    | Users in the same group |
 | Others   | All other users         |
 
-### Example
-
-```text
-rwxr-xr--
-
-
-### Breakdown
-
-- `rwx` → User has full access (read, write, execute)
-- `r-x` → Group can read and execute
-- `r--` → Others can only read
-
----
-
-## Numeric (Octal) Permissions
-
-Permissions can also be represented using numbers:
-
-| Permission | Value |
-|------------|--------|
-| Read (r)   | 4      |
-| Write (w)  | 2      |
-| Execute (x)| 1      |
-
-### Example
-
----
-
-# ✅ AND FOR 755
-
-
-### Breakdown
-
-- 7 (4+2+1) → Full access (rwx)
-- 5 (4+1) → Read + execute (r-x)
-- 5 (4+1) → Read + execute (r-x)
+Each category can have different levels of access.
 
 ---
 
 ## How It Works
 
-When a user or process tries to access a file:
+When a user or process attempts to access a file:
 
-1. The OS checks the file’s owner
-2. Determines whether the user is:
-   - Owner
-   - In the group
-   - Others
-3. Applies the corresponding permissions
-4. Grants or denies access
+1. The operating system checks who owns the file
+2. It determines whether the user is:
+   - The owner
+   - Part of the group
+   - Neither (others)
+3. It applies the corresponding permissions
+4. Access is either granted or denied
+
+This process ensures controlled and secure interaction with files.
 
 ---
 
 ## Files vs Directories
 
-Permissions behave differently for files and directories:
+Permissions behave differently depending on whether they are applied to files or directories.
 
 ### Files
-- Read → View contents
-- Write → Modify contents
-- Execute → Run as a program
+
+- Read → Allows viewing file contents  
+- Write → Allows modifying contents  
+- Execute → Allows running the file as a program  
 
 ### Directories
-- Read → List files inside
-- Write → Create/delete files
-- Execute → Enter/access the directory
+
+- Read → Allows listing contents  
+- Write → Allows adding or removing files  
+- Execute → Allows entering or accessing the directory  
+
+---
+
+## Security Role
+
+File permissions are a key part of system security. They:
+
+- Prevent unauthorized access
+- Protect system files from modification
+- Limit what users and programs can do
+- Help maintain system integrity
 
 ---
 
 ## Summary
 
-File permissions are a fundamental security mechanism in operating systems that control access to files and directories.
+File permissions are a fundamental mechanism used by operating systems to control access to files and directories.
 
-They ensure that users and processes can only perform allowed actions, maintaining system security and stability.
+By defining who can read, write, or execute files, the system ensures security, stability, and proper resource management.
