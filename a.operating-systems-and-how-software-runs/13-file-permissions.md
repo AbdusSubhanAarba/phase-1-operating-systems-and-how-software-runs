@@ -51,6 +51,7 @@ Permissions are defined for three categories:
 
 ### Example
 
+```text
 rwxr-xr--
 
 
@@ -74,8 +75,9 @@ Permissions can also be represented using numbers:
 
 ### Example
 
-755
+---
 
+# ✅ AND FOR 755
 
 
 ### Breakdown
